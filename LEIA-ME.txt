@@ -1,16 +1,2 @@
-GVNN v6 — correção baseada no index.html atual enviado pelo usuário
-
-Substituir no GitHub:
-- index.html
-- sw.js
-- pasta images inteira (inclui gvnn-header.jpg e images/exercicios/*.jpg)
-
-Manter sem alterações:
-- manifest.webmanifest
-- icon-192.png / icon-512.png e demais arquivos existentes.
-
-Importante:
-- A chave localStorage continua shadowGymV1.
-- A estrutura dos dados, treinos A/B/C, GVNN Records, gráficos, histórico e backup foi preservada a partir do index.html enviado.
-- Cache atualizado para shadow-gym-v6.
-- Miniaturas são ilustrações conceituais. Alguns movimentos sem tile idêntico usam a ilustração mais próxima.
+GVNN v7 — correção das miniaturas
+Substitua index.html, sw.js e a pasta images inteira. Mantenha manifest e ícones atuais. A chave localStorage shadowGymV1 foi mantida. Cache shadow-gym-v7.
