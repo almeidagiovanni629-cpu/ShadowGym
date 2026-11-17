@@ -1,1 +1,18 @@
-SHADOW GYM\n\nPWA para Android. Inclui treino ABC, registro de cargas/repetições, séries concluídas, histórico, gráfico por exercício, peso corporal e backup JSON. Sem anúncios, pagamentos ou assinatura.\n\nPara instalar no Android: publique index.html, manifest.webmanifest e sw.js em um endereço HTTPS; abra no Chrome Android; menu ⋮ > Instalar app/Adicionar à tela inicial.\n\nOs dados ficam localmente no navegador/aparelho. Exporte backup em Dados regularmente. Esta versão não sincroniza entre aparelhos.\n
+GVNN v4 — pacote de atualização
+================================
+
+Conteúdo:
+- index.html: aplicativo atualizado
+- images/gvnn-header.jpg: arte do cabeçalho
+- images/exercicios/: 21 mini-ilustrações
+- manifest.webmanifest e sw.js: mantenha os arquivos já existentes no repositório
+
+ATUALIZAÇÃO NO GITHUB:
+1. Envie/substitua index.html na raiz do repositório.
+2. Envie a pasta images inteira, mantendo os caminhos.
+3. No sw.js, altere o nome do cache para shadow-gym-v4.
+4. Não altere a chave localStorage "shadowGymV1": ela mantém compatibilidade com os dados locais.
+5. Abra o site no Chrome e aguarde o service worker atualizar.
+
+OBSERVAÇÃO:
+As ilustrações são miniaturas recortadas do painel de exercícios da arte conceitual gerada para o GVNN. São imagens ilustrativas, não fotografias técnicas ou instruções de execução.

@@ -1,9 +1,8 @@
-
 {
   "id": "./",
-  "name": "SHADOW GYM - Treino e Evolução",
+  "name": "GVNN - Treino e Evolução",
   "short_name": "GVNN",
-  "description": "Seu aplicativo pessoal de musculação e evolução.",
+  "description": "Treino, disciplina e evolução.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
