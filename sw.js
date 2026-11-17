@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "shadow-gym-v2";
+const CACHE_NAME = "shadow-gym-v3";
 
 const FILES = [
   "./",
