@@ -1,18 +1,5 @@
-GVNN v4 — pacote de atualização
-================================
+GVNN v5 — correção visual
 
-Conteúdo:
-- index.html: aplicativo atualizado
-- images/gvnn-header.jpg: arte do cabeçalho
-- images/exercicios/: 21 mini-ilustrações
-- manifest.webmanifest e sw.js: mantenha os arquivos já existentes no repositório
+Substitua index.html e sw.js na raiz do repositório. Envie/substitua a pasta images inteira, mantendo images/gvnn-header.jpg e images/exercicios/*.jpg. Mantenha manifest.webmanifest e os ícones atuais. Cache: shadow-gym-v5. A chave localStorage continua shadowGymV1.
 
-ATUALIZAÇÃO NO GITHUB:
-1. Envie/substitua index.html na raiz do repositório.
-2. Envie a pasta images inteira, mantendo os caminhos.
-3. No sw.js, altere o nome do cache para shadow-gym-v4.
-4. Não altere a chave localStorage "shadowGymV1": ela mantém compatibilidade com os dados locais.
-5. Abra o site no Chrome e aguarde o service worker atualizar.
-
-OBSERVAÇÃO:
-As ilustrações são miniaturas recortadas do painel de exercícios da arte conceitual gerada para o GVNN. São imagens ilustrativas, não fotografias técnicas ou instruções de execução.
+As miniaturas são ilustrações conceituais, não fotografias instrutivas.
