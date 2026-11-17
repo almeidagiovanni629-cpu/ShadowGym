@@ -2,8 +2,8 @@
 {
   "id": "./",
   "name": "SHADOW GYM - Treino e Evolução",
-  "short_name": "SHADOW GYM",
-  "description": "Seu aplicativo pessoal de musculação, cargas e evolução.",
+  "short_name": "GVNN",
+  "description": "Seu aplicativo pessoal de musculação e evolução.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -12,15 +12,15 @@
   "theme_color": "#101010",
   "icons": [
     {
-      "src": "./icon-192.svg",
+      "src": "./icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icon-512.svg",
+      "src": "./icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     }
   ]
