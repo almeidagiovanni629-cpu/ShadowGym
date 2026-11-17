@@ -19,7 +19,7 @@ button{background:var(--r);color:white;border:0;border-radius:10px;padding:11px 
 button.alt{background:#292929;border:1px solid #444}button.small{padding:7px 10px;font-size:12px}
 .row{display:flex;justify-content:space-between;align-items:center;gap:8px}.tabs{display:flex;gap:8px;margin:12px 0}.tabs button{flex:1}
 .exercise{border-top:1px solid var(--l);padding:13px 0}.exercise:first-child{border:0}
-.exercise-head{display:flex;align-items:center;gap:11px}.exercise-art{width:92px;height:92px;flex:none;border-radius:14px;background:#080808;border:2px solid var(--r);object-fit:contain;object-position:center;display:block;padding:3px}
+.exercise-head{display:block;padding:2px 0 0}.exercise-head b{display:block;font-size:16px;line-height:1.35}
 .muscle{color:var(--m);font-size:12px}.sets{display:grid;grid-template-columns:30px 1fr 1fr 35px;gap:7px;align-items:center;margin-top:8px}
 .sets label{font-size:11px;color:var(--m)}input,select,textarea{background:#090909;color:white;border:1px solid #555;border-radius:8px;padding:9px;width:100%;min-width:0}
 input[type=checkbox]{width:20px;height:20px;accent-color:var(--r)}
@@ -90,8 +90,6 @@ function start(p){
  document.getElementById("wtabs").innerHTML=["A","B","C"].map(x=>`<button class="${x===p?"":"alt"}" onclick="start('${x}')">Treino ${x}</button>`).join("");
  renderSession();page("workout")
 }
-const EXIMG={"Supino reto com barra": "supino-reto", "Supino inclinado com halteres": "supino-inclinado", "Crossover na polia": "crossover", "Desenvolvimento com halteres": "desenvolvimento", "Elevação lateral": "elevacao-lateral", "Tríceps corda": "triceps-polia", "Tríceps francês na polia": "triceps-frances", "Puxada alta aberta": "puxada-alta", "Remada baixa": "remada-baixa", "Remada articulada": "remada-curvada", "Crucifixo inverso": "crucifixo-inverso", "Rosca direta com barra": "rosca-direta", "Rosca inclinada com halteres": "rosca-alternada", "Rosca martelo": "rosca-martelo", "Agachamento livre": "agachamento", "Leg press 45°": "leg-press", "Stiff com barra": "cadeira-flexora", "Cadeira flexora": "cadeira-flexora", "Cadeira extensora": "cadeira-extensora", "Panturrilha em pé": "panturrilha", "Abdominal na polia": "triceps-frances"};
-function artFor(name){return "images/exercicios/"+(EXIMG[name]||"supino-reto")+".jpg"}
 function lastExercise(name){
  for(const l of db.logs){const e=(l.items||[]).find(x=>x.name===name);if(e)return {log:l,exercise:e}}
  return null
@@ -103,7 +101,7 @@ function comparisonHTML(name){
 }
 function renderSession(){
  document.getElementById("exlist").innerHTML=session.map((e,i)=>`<div class="exercise">
- <div class="exercise-head"><img class="exercise-art" src="${artFor(e.name)}" alt="Ilustração de ${e.name}"><div style="flex:1"><b>${i+1}. ${e.name}</b><div class="muscle">${e.muscle}</div>${comparisonHTML(e.name)}</div></div>
+ <div class="exercise-head"><b>${i+1}. ${e.name}</b><div class="muscle">${e.muscle}</div>${comparisonHTML(e.name)}</div>
  <div class="sets"><label>SÉRIE</label><label>CARGA kg</label><label>REPS</label><label>OK</label></div>
  ${e.sets.map((s,j)=>`<div class="sets"><label>${j+1}</label><input type="number" min="0" step=".5" placeholder="0" value="${s.kg}" onchange="edit(${i},${j},'kg',this.value)"><input type="number" min="1" value="${s.reps}" onchange="edit(${i},${j},'reps',this.value)"><input type="checkbox" ${s.done?"checked":""} onchange="edit(${i},${j},'done',this.checked)"></div>`).join("")}
  </div>`).join("")
@@ -121,7 +119,7 @@ function home(){
 }
 function plans(){
  let p=window.pc||"A";document.getElementById("ptabs").innerHTML=["A","B","C"].map(x=>`<button class="${x===p?"":"alt"}" onclick="window.pc='${x}';plans()">Treino ${x}</button>`).join("");
- document.getElementById("planbody").innerHTML=`<h3>Treino ${p} — ${P[p].d}</h3>`+P[p].e.map((e,i)=>`<div class="exercise"><div class="exercise-head"><img class="exercise-art" src="${artFor(e[0])}" alt="Ilustração de ${e[0]}"><div><b>${i+1}. ${e[0]}</b><div class="muted">${e[1]} • ${e[2]} séries • ${e[3]}–${e[4]} reps</div></div></div></div>`).join("")
+ document.getElementById("planbody").innerHTML=`<h3>Treino ${p} — ${P[p].d}</h3>`+P[p].e.map((e,i)=>`<div class="exercise"><div class="exercise-head"><b>${i+1}. ${e[0]}</b><div class="muted">${e[1]} • ${e[2]} séries • ${e[3]}–${e[4]} reps</div></div></div>`).join("")
 }
 function history(){
  let el=document.getElementById("logs");

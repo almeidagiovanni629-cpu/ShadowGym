@@ -1,2 +1,5 @@
-GVNN v7 — correção das miniaturas
-Substitua index.html, sw.js e a pasta images inteira. Mantenha manifest e ícones atuais. A chave localStorage shadowGymV1 foi mantida. Cache shadow-gym-v7.
+GVNN v8 — versão sem miniaturas
+
+Substitua index.html e sw.js na raiz do GitHub. Mantenha manifest.webmanifest e os ícones PNG atuais (não precisam ser substituídos). Não há pasta images nesta versão porque as miniaturas foram removidas.
+
+A chave localStorage continua shadowGymV1 para manter compatibilidade com os registros locais. O cache foi atualizado para shadow-gym-v8.
